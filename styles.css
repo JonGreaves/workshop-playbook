@@ -725,7 +725,7 @@ body.modal-open {
 }
 
 .modal-panel h2 {
-	font-size: clamp(2.3rem, 5vw, 4.5rem);
+	font-size: clamp(2.3rem, 3vw, 4.5rem);
 	line-height: .98;
 	margin: 1.5rem 0 1rem;
 	padding-right: 3rem;
@@ -753,7 +753,8 @@ body.modal-open {
 .modal-section ol {
 	color: var(--muted);
 	margin: 0;
-	padding-left: 1.25rem
+	padding-left: 1.25rem;
+	padding-bottom: 1rem;
 }
 
 .modal-section li {
