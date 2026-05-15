@@ -259,9 +259,9 @@ code {
 
 .hero h1 {
 	color: var(--white);
-	max-width: 13.5ch;
+	max-width: 24.5ch;
 	margin: 0 0 1.5rem;
-	font-size: clamp(3rem, 6.6vw, 7rem);
+	font-size: clamp(3rem, 4.6vw, 7rem);
 	line-height: .95;
 	font-weight: 300;
 	position: relative;
@@ -346,9 +346,9 @@ code {
 
 .section-heading h2 {
 	color: var(--black);
-	max-width: 11ch;
+	max-width: 20ch;
 	margin: 0 0 1.5rem;
-	font-size: clamp(2.7rem, 4.8vw, 5.6rem);
+	font-size: clamp(2.7rem, 3.5vw, 5.6rem);
 	line-height: .98;
 	font-weight: 300
 }
