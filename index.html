@@ -8,231 +8,257 @@
   <link rel="stylesheet" href="styles.css" />
 </head>
 <body>
-  <header class="hero">
-    <nav class="topbar" aria-label="Primary navigation">
-      <a href="#home" class="brand">Discovery Playbook</a>
-      <div class="navlinks">
-        <a href="#workshops">Workshop types</a>
-        <a href="#techniques">Techniques</a>
-        <a href="#recommender">Recommender</a>
-        <a href="#assets">Insight assets</a>
-      </div>
-    </nav>
-    <section id="home" class="hero-content">
-      <p class="eyebrow">Product discovery workshop operating system</p>
-      <h1>Choose better workshops, facilitate sharper conversations, and turn outputs into reusable insight assets.</h1>
-      <p class="lede">A practical internal playbook for product designers working across new ideas, established products, delivery uncertainty, strategic alignment, and validation.</p>
-      <div class="hero-actions">
-        <a class="button primary" href="#recommender">Recommend a workshop</a>
-        <a class="button secondary" href="#workshops">Explore the playbook</a>
-      </div>
-    </section>
-  </header>
+  <div class="app-shell">
+    <aside class="sidebar" aria-label="Playbook navigation">
+      <a href="#home" class="brand">
+        <span class="brand-mark" aria-hidden="true">DP</span>
+        <span>
+          <strong>Discovery Playbook</strong>
+          <small>Workshop intelligence for product teams</small>
+        </span>
+      </a>
 
-  <main>
-    <section class="section intro-grid" aria-label="Core principles">
-      <article class="principle-card">
-        <h2>Start with uncertainty</h2>
+      <nav class="nav" aria-label="Primary navigation">
+        <a href="#home" class="active"><span>01</span> Home</a>
+        <a href="#principles"><span>02</span> Principles</a>
+        <a href="#workshops"><span>03</span> Workshop types</a>
+        <a href="#techniques"><span>04</span> Techniques library</a>
+        <a href="#recommender"><span>05</span> Recommender</a>
+        <a href="#assets"><span>06</span> Insight assets</a>
+      </nav>
+
+      <div class="sidebar-card">
+        <strong>Facilitation rule</strong>
         <p>Do not ask “what workshop should we run?” Ask “what uncertainty are we trying to reduce?”</p>
-      </article>
-      <article class="principle-card">
-        <h2>Design for decisions</h2>
-        <p>A workshop should create shared understanding, evidence, decisions, or action. Otherwise, it is just a meeting with sticky notes.</p>
-      </article>
-      <article class="principle-card">
-        <h2>Preserve the learning</h2>
-        <p>Workshop outputs should become decision records, insight repositories, opportunity backlogs, and strategic narratives.</p>
-      </article>
-    </section>
-
-    <section id="workshops" class="section">
-      <div class="section-heading">
-        <p class="eyebrow">Catalogue</p>
-        <h2>Workshop types</h2>
-        <p>Six core discovery modes you can combine depending on product maturity, uncertainty, audience, and decision need.</p>
+        <a href="#recommender" class="sidebar-link">Start intake →</a>
       </div>
-      <div id="workshopGrid" class="card-grid"></div>
-    </section>
+    </aside>
 
-    <section id="techniques" class="section alt">
-      <div class="section-heading">
-        <p class="eyebrow">Toolkit</p>
-        <h2>Techniques library</h2>
-        <p>Browse reusable facilitation techniques. Add more inside <code>app.js</code> to grow the knowledge base.</p>
-      </div>
-      <div class="filter-row" role="group" aria-label="Technique filters">
-        <button class="chip active" data-filter="All">All</button>
-        <button class="chip" data-filter="Alignment">Alignment</button>
-        <button class="chip" data-filter="Problem">Problem</button>
-        <button class="chip" data-filter="Opportunity">Opportunity</button>
-        <button class="chip" data-filter="Validation">Validation</button>
-        <button class="chip" data-filter="Delivery">Delivery</button>
-        <button class="chip" data-filter="Strategic">Strategic</button>
-      </div>
-      <div id="techniqueGrid" class="technique-grid"></div>
-    </section>
+    <div class="main">
+      <header class="topbar" aria-label="Page tools">
+        <a href="#home" class="mobile-brand">Discovery Playbook</a>
+        <a class="topbar-cta" href="#recommender">Recommend a workshop</a>
+      </header>
 
-    <section id="recommender" class="section recommender-section">
-      <div class="section-heading">
-        <p class="eyebrow">Workshop intake</p>
-        <h2>Recommend an approach</h2>
-        <p>Enter the context for an upcoming workshop and receive a recommended workshop mode, activity stack, and expected deliverables.</p>
-      </div>
+      <main class="content">
+        <section id="home" class="hero detail-hero">
+          <p class="kicker">Product discovery workshop operating system</p>
+          <h1>Choose better workshops, facilitate sharper conversations, and turn outputs into reusable insight assets.</h1>
+          <p class="lede">A practical internal playbook for product designers working across new ideas, established products, delivery uncertainty, strategic alignment, and validation.</p>
+          <div class="hero-actions">
+            <a class="button primary" href="#recommender">Recommend a workshop</a>
+            <a class="button secondary" href="#workshops">Explore the playbook</a>
+          </div>
+        </section>
 
-      <div class="recommender-layout">
-        <form id="intakeForm" class="panel form-panel">
-          <label>
-            Initiative or project name
-            <input name="projectName" type="text" placeholder="e.g. Customer onboarding redesign" />
-          </label>
+        <section id="principles" class="section intro-grid" aria-label="Core principles">
+          <article class="principle-card">
+            <p class="card-number">01</p>
+            <h2>Start with uncertainty</h2>
+            <p>Do not ask “what workshop should we run?” Ask “what uncertainty are we trying to reduce?”</p>
+          </article>
+          <article class="principle-card">
+            <p class="card-number">02</p>
+            <h2>Design for decisions</h2>
+            <p>A workshop should create shared understanding, evidence, decisions, or action. Otherwise, it is just a meeting with sticky notes.</p>
+          </article>
+          <article class="principle-card">
+            <p class="card-number">03</p>
+            <h2>Preserve the learning</h2>
+            <p>Workshop outputs should become decision records, insight repositories, opportunity backlogs, and strategic narratives.</p>
+          </article>
+        </section>
 
-          <label>
-            Briefly describe the challenge or opportunity
-            <textarea name="challenge" rows="4" placeholder="What prompted this workshop?"></textarea>
-          </label>
+        <section id="workshops" class="section">
+          <div class="section-heading">
+            <p class="kicker">Catalogue</p>
+            <h2>Workshop types</h2>
+            <p>Six core discovery modes you can combine depending on product maturity, uncertainty, audience, and decision need.</p>
+          </div>
+          <div id="workshopGrid" class="card-grid"></div>
+        </section>
 
-          <label>
-            Initiative lifecycle
-            <select name="lifecycle" required>
-              <option value="early">Very early idea stage</option>
-              <option value="problem">Problem definition stage</option>
-              <option value="opportunity">Opportunity exploration</option>
-              <option value="concept">Concept development</option>
-              <option value="validation">Validation / MVP stage</option>
-              <option value="delivery">Active delivery / build phase</option>
-              <option value="mature">Existing mature product</option>
-              <option value="strategy">Strategic / portfolio planning</option>
-            </select>
-          </label>
+        <section id="techniques" class="section alt">
+          <div class="section-heading">
+            <p class="kicker">Toolkit</p>
+            <h2>Techniques library</h2>
+            <p>Browse reusable facilitation techniques. Add more inside <code>app.js</code> to grow the knowledge base.</p>
+          </div>
+          <div class="filter-row" role="group" aria-label="Technique filters">
+            <button class="chip active" data-filter="All">All</button>
+            <button class="chip" data-filter="Alignment">Alignment</button>
+            <button class="chip" data-filter="Problem">Problem</button>
+            <button class="chip" data-filter="Opportunity">Opportunity</button>
+            <button class="chip" data-filter="Validation">Validation</button>
+            <button class="chip" data-filter="Delivery">Delivery</button>
+            <button class="chip" data-filter="Strategic">Strategic</button>
+          </div>
+          <div id="techniqueGrid" class="technique-grid"></div>
+        </section>
 
-          <fieldset>
-            <legend>Biggest unknowns <span>Select all that apply</span></legend>
-            <div class="checkbox-grid">
-              <label><input type="checkbox" name="unknowns" value="userNeeds"> User needs</label>
-              <label><input type="checkbox" name="unknowns" value="businessGoals"> Business goals</label>
-              <label><input type="checkbox" name="unknowns" value="technicalFeasibility"> Technical feasibility</label>
-              <label><input type="checkbox" name="unknowns" value="marketDemand"> Market demand</label>
-              <label><input type="checkbox" name="unknowns" value="priorities"> Priorities</label>
-              <label><input type="checkbox" name="unknowns" value="successMeasures"> Success measures</label>
-              <label><input type="checkbox" name="unknowns" value="journeyProcess"> User journey / process</label>
-              <label><input type="checkbox" name="unknowns" value="stakeholderAlignment"> Stakeholder alignment</label>
-              <label><input type="checkbox" name="unknowns" value="featureScope"> Feature scope</label>
-              <label><input type="checkbox" name="unknowns" value="risksAssumptions"> Risks / assumptions</label>
-            </div>
-          </fieldset>
-
-          <fieldset>
-            <legend>Audience type <span>Select all that apply</span></legend>
-            <div class="checkbox-grid">
-              <label><input type="checkbox" name="audience" value="executives"> Executives</label>
-              <label><input type="checkbox" name="audience" value="product"> Product managers</label>
-              <label><input type="checkbox" name="audience" value="design"> Designers</label>
-              <label><input type="checkbox" name="audience" value="engineering"> Developers / engineers</label>
-              <label><input type="checkbox" name="audience" value="research"> Researchers</label>
-              <label><input type="checkbox" name="audience" value="business"> Business stakeholders</label>
-              <label><input type="checkbox" name="audience" value="ops"> Operations / support</label>
-              <label><input type="checkbox" name="audience" value="users"> Actual users / customers</label>
-            </div>
-          </fieldset>
-
-          <div class="two-col">
-            <label>
-              Audience size
-              <select name="size">
-                <option value="small">2–5</option>
-                <option value="medium">6–10</option>
-                <option value="large">11–15</option>
-                <option value="xlarge">16–25</option>
-                <option value="huge">25+</option>
-              </select>
-            </label>
-            <label>
-              Format
-              <select name="format">
-                <option value="remote">Remote</option>
-                <option value="inperson">In person</option>
-                <option value="hybrid">Hybrid</option>
-              </select>
-            </label>
+        <section id="recommender" class="section recommender-section">
+          <div class="section-heading">
+            <p class="kicker">Workshop intake</p>
+            <h2>Recommend an approach</h2>
+            <p>Enter the context for an upcoming workshop and receive a recommended workshop mode, activity stack, and expected deliverables.</p>
           </div>
 
-          <div class="two-col">
-            <label>
-              Available duration
-              <select name="duration">
-                <option value="short">30–60 mins</option>
-                <option value="half">Half day</option>
-                <option value="full">Full day</option>
-                <option value="multi">Multiple sessions</option>
-              </select>
-            </label>
-            <label>
-              Existing material
-              <select name="material">
-                <option value="none">None</option>
-                <option value="some">Some research / data</option>
-                <option value="significant">Significant existing material</option>
-              </select>
-            </label>
+          <div class="recommender-layout">
+            <form id="intakeForm" class="panel form-panel">
+              <label>
+                Initiative or project name
+                <input name="projectName" type="text" placeholder="e.g. Customer onboarding redesign" />
+              </label>
+
+              <label>
+                Briefly describe the challenge or opportunity
+                <textarea name="challenge" rows="4" placeholder="What prompted this workshop?"></textarea>
+              </label>
+
+              <label>
+                Initiative lifecycle
+                <select name="lifecycle" required>
+                  <option value="early">Very early idea stage</option>
+                  <option value="problem">Problem definition stage</option>
+                  <option value="opportunity">Opportunity exploration</option>
+                  <option value="concept">Concept development</option>
+                  <option value="validation">Validation / MVP stage</option>
+                  <option value="delivery">Active delivery / build phase</option>
+                  <option value="mature">Existing mature product</option>
+                  <option value="strategy">Strategic / portfolio planning</option>
+                </select>
+              </label>
+
+              <fieldset>
+                <legend>Biggest unknowns <span>Select all that apply</span></legend>
+                <div class="checkbox-grid">
+                  <label><input type="checkbox" name="unknowns" value="userNeeds"> User needs</label>
+                  <label><input type="checkbox" name="unknowns" value="businessGoals"> Business goals</label>
+                  <label><input type="checkbox" name="unknowns" value="technicalFeasibility"> Technical feasibility</label>
+                  <label><input type="checkbox" name="unknowns" value="marketDemand"> Market demand</label>
+                  <label><input type="checkbox" name="unknowns" value="priorities"> Priorities</label>
+                  <label><input type="checkbox" name="unknowns" value="successMeasures"> Success measures</label>
+                  <label><input type="checkbox" name="unknowns" value="journeyProcess"> User journey / process</label>
+                  <label><input type="checkbox" name="unknowns" value="stakeholderAlignment"> Stakeholder alignment</label>
+                  <label><input type="checkbox" name="unknowns" value="featureScope"> Feature scope</label>
+                  <label><input type="checkbox" name="unknowns" value="risksAssumptions"> Risks / assumptions</label>
+                </div>
+              </fieldset>
+
+              <fieldset>
+                <legend>Audience type <span>Select all that apply</span></legend>
+                <div class="checkbox-grid">
+                  <label><input type="checkbox" name="audience" value="executives"> Executives</label>
+                  <label><input type="checkbox" name="audience" value="product"> Product managers</label>
+                  <label><input type="checkbox" name="audience" value="design"> Designers</label>
+                  <label><input type="checkbox" name="audience" value="engineering"> Developers / engineers</label>
+                  <label><input type="checkbox" name="audience" value="research"> Researchers</label>
+                  <label><input type="checkbox" name="audience" value="business"> Business stakeholders</label>
+                  <label><input type="checkbox" name="audience" value="ops"> Operations / support</label>
+                  <label><input type="checkbox" name="audience" value="users"> Actual users / customers</label>
+                </div>
+              </fieldset>
+
+              <div class="two-col">
+                <label>
+                  Audience size
+                  <select name="size">
+                    <option value="small">2–5</option>
+                    <option value="medium">6–10</option>
+                    <option value="large">11–15</option>
+                    <option value="xlarge">16–25</option>
+                    <option value="huge">25+</option>
+                  </select>
+                </label>
+                <label>
+                  Format
+                  <select name="format">
+                    <option value="remote">Remote</option>
+                    <option value="inperson">In person</option>
+                    <option value="hybrid">Hybrid</option>
+                  </select>
+                </label>
+              </div>
+
+              <div class="two-col">
+                <label>
+                  Available duration
+                  <select name="duration">
+                    <option value="short">30–60 mins</option>
+                    <option value="half">Half day</option>
+                    <option value="full">Full day</option>
+                    <option value="multi">Multiple sessions</option>
+                  </select>
+                </label>
+                <label>
+                  Existing material
+                  <select name="material">
+                    <option value="none">None</option>
+                    <option value="some">Some research / data</option>
+                    <option value="significant">Significant existing material</option>
+                  </select>
+                </label>
+              </div>
+
+              <label>
+                Known disagreement or tension
+                <select name="tension">
+                  <option value="none">No</option>
+                  <option value="minor">Minor differences</option>
+                  <option value="significant">Significant disagreement</option>
+                  <option value="unknown">Unknown</option>
+                </select>
+              </label>
+
+              <label>
+                What would make this workshop feel like a failure?
+                <textarea name="failure" rows="3" placeholder="e.g. People leave without agreeing on priorities."></textarea>
+              </label>
+
+              <button type="submit" class="button primary full-width">Generate recommendation</button>
+            </form>
+
+            <aside id="recommendation" class="panel recommendation-panel" aria-live="polite">
+              <div class="empty-state">
+                <h3>Your recommendation will appear here</h3>
+                <p>Complete the intake form to receive a suggested workshop type, facilitation approach, activities, and deliverables.</p>
+              </div>
+            </aside>
           </div>
+        </section>
 
-          <label>
-            Known disagreement or tension
-            <select name="tension">
-              <option value="none">No</option>
-              <option value="minor">Minor differences</option>
-              <option value="significant">Significant disagreement</option>
-              <option value="unknown">Unknown</option>
-            </select>
-          </label>
-
-          <label>
-            What would make this workshop feel like a failure?
-            <textarea name="failure" rows="3" placeholder="e.g. People leave without agreeing on priorities."></textarea>
-          </label>
-
-          <button type="submit" class="button primary full-width">Generate recommendation</button>
-        </form>
-
-        <aside id="recommendation" class="panel recommendation-panel" aria-live="polite">
-          <div class="empty-state">
-            <h3>Your recommendation will appear here</h3>
-            <p>Complete the intake form to receive a suggested workshop type, facilitation approach, activities, and deliverables.</p>
+        <section id="assets" class="section alt">
+          <div class="section-heading">
+            <p class="kicker">After the workshop</p>
+            <h2>Turn outputs into insight assets</h2>
+            <p>Do not let workshop boards become lonely old documents. Convert them into durable product intelligence.</p>
           </div>
-        </aside>
-      </div>
-    </section>
+          <div class="asset-grid">
+            <article>
+              <h3>Decision records</h3>
+              <p>Capture what was decided, why, who contributed, what evidence supported the choice, and what remains uncertain.</p>
+            </article>
+            <article>
+              <h3>Insight repository</h3>
+              <p>Store user pains, research clips, assumptions, experiments, behavioural patterns, and evidence in a searchable structure.</p>
+            </article>
+            <article>
+              <h3>Opportunity backlog</h3>
+              <p>Track opportunities as outcome-focused problem areas rather than jumping straight to feature requests.</p>
+            </article>
+            <article>
+              <h3>Strategic narrative</h3>
+              <p>Translate workshop synthesis into a concise story that explains where the business is, what users need, and what should happen next.</p>
+            </article>
+          </div>
+        </section>
+      </main>
 
-    <section id="assets" class="section alt">
-      <div class="section-heading">
-        <p class="eyebrow">After the workshop</p>
-        <h2>Turn outputs into insight assets</h2>
-        <p>Do not let workshop boards become lonely old documents. Convert them into durable product intelligence.</p>
-      </div>
-      <div class="asset-grid">
-        <article>
-          <h3>Decision records</h3>
-          <p>Capture what was decided, why, who contributed, what evidence supported the choice, and what remains uncertain.</p>
-        </article>
-        <article>
-          <h3>Insight repository</h3>
-          <p>Store user pains, research clips, assumptions, experiments, behavioural patterns, and evidence in a searchable structure.</p>
-        </article>
-        <article>
-          <h3>Opportunity backlog</h3>
-          <p>Track opportunities as outcome-focused problem areas rather than jumping straight to feature requests.</p>
-        </article>
-        <article>
-          <h3>Strategic narrative</h3>
-          <p>Translate workshop synthesis into a concise story that explains where the business is, what users need, and what should happen next.</p>
-        </article>
-      </div>
-    </section>
-  </main>
-
-  <footer class="footer">
-    <p>Built as a starter playbook. Extend the workshop and technique data in <code>app.js</code>.</p>
-  </footer>
+      <footer class="footer">
+        <p>Built as a starter playbook. Extend the workshop and technique data in <code>app.js</code>.</p>
+      </footer>
+    </div>
+  </div>
 
   <script src="app.js"></script>
 </body>
